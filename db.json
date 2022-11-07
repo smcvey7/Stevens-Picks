@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Mr. Sunshine",
+      "img": "https://upload.wikimedia.org/wikipedia/en/a/a5/Mr._Sunshine_%282018_TV_series%29.jpg",
+      "text": "password",
+      "type": "watch",
+      "likes": 0
+    }
+  ],
+  "users": [
+    {
+      "username": "user123",
+      "password": "password"
+    }
+  ]
+}
