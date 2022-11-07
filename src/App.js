@@ -1,4 +1,6 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import {Route, Switch, useHistory} from "react-router-dom"
+import Home from './Home'
 import './App.css';
 
 function App() {
