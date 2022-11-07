@@ -5,9 +5,143 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(102, 103, 171, 0.7);
+
+}
+
+#root {
+  white-space: pre-line;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1{
+  color: white;
+}
+
+div#navBar {
+  font-size: 30px;
+  justify-content: space-around;
+}
+
+a:link, a:visited {
+  color: white;
+  text-decoration: underline;
+}
+
+a.clickLink{
+  text-decoration: underline;
+}
+
+.flexContainer{
+  display: flex;
+}
+
+.componentFlexContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.moduleElement{
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 3px;
+  margin: 25px 50px 25px 50px;
+  background-color: white;
+}
+
+.messageButtons{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+button, input.sendButton{
+  margin-left: 20px;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.noBullet{
+  list-style: none;
+}
+
+.messageItem{
+  margin: 20px;
+}
+
+.noMargin{
+  margin: 0px;
+  padding: 0px;
+}
+
+table{
+  width: 90%;
+  text-align: center;
+  border-style: solid;
+  border-collapse: collapse;
+  margin: 20px;
+  margin-left: 5%;
+  margin-bottom: 20px;
+  word-wrap: normal;
+}
+
+td, th{
+  border-style: solid;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+h1, h2{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin-left: 25px;
+}
+
+#navBar{
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+a.navLinks{
+  text-decoration: none;
+}
+
+a.navLinks:hover{
+  text-decoration: underline;
+}
+
+div.accountForm{
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 3px;
+  margin: 10px;
+  background-color: white;
+  width: 50%;
+}
+
+#createAccountForm, #logInForm, #newMessageForm{
+  margin: 15px;
+}
+
+input{
+  margin: 10px;
+}
+
+textarea#newMessageTextArea{
+  margin: 10px;
+  width: 90%;
+  height: 200px;
+}
+
+strong.completedScore{
+  color: rgb(102, 103, 171);
+}
+
+textarea.assignmentText{
+  width: 700px;
+  height: 500px;
 }
