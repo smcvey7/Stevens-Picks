@@ -3,16 +3,28 @@
     {
       "id": 1,
       "title": "Mr. Sunshine",
+      "creator": "",
       "img": "https://upload.wikimedia.org/wikipedia/en/a/a5/Mr._Sunshine_%282018_TV_series%29.jpg",
-      "text": "password",
+      "text": "",
       "type": "watch",
       "likes": 0
     }
   ],
   "users": [
     {
+      "id": 1,
       "username": "user123",
       "password": "password"
+    },
+    {
+      "username": "smcvey",
+      "password": "password",
+      "id": 2
+    },
+    {
+      "username": "pmcvey",
+      "password": "kittens",
+      "id": 3
     }
   ]
 }

@@ -7,20 +7,14 @@ import Read from './Read';
 import Watch from './Watch';
 import Listen from './Listen';
 import Login from './Login';
+import Recommendation from './Recommendation';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
+  const [createNew, setCreateNew] = useState(false)
+  const history = useHistory()
 
   function handleLogIn(userInfo){
-
-  }
-
-  function createAccount(userInfo){
-    const newUser = {
-      username: userInfo.username,
-      password: userInfo.password
-    }
-    
     fetch(`http://localhost:3000/users/`, {
       method: "GET",
       headers: {
@@ -30,7 +24,27 @@ function App() {
     .then(res=>res.json())
     .then(data=>{
       const userData = data.filter(user=>user.username === userInfo.username)
-      if (userData.length !== 0) alert(`Username ${userInfo.username} already taken. Please select a different username.`)
+      if (userData.length === 0) alert(`Username ${userInfo.username} does not exist. Please try again or create an account.`)
+      else if (userInfo.username !== userData[0].username || userInfo.password !== userData[0].password) {
+        alert("Incorrect username/password combo. Please try again or create an account.")}
+      else if (userInfo.username === userData[0].username && userInfo.password === userData[0].password){
+        setCurrentUser(userData[0])
+        history.push("/")
+      }
+    })
+  }
+
+  function handleCreateAccount(newUser){
+    fetch(`http://localhost:3000/users/`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "Application/json"
+      }
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      const userData = data.filter(user=>user.username === newUser.username)
+      if (userData.length !== 0) alert(`Username ${newUser.username} already taken. Please select a different username.`)
       else{
         fetch(`http://localhost:3000/users/`, {
       method: "POST",
@@ -50,7 +64,9 @@ function App() {
   return (
     <div className="App">
       <h1>Steven's Picks</h1>
-      <NavBar currentUser={currentUser} />
+      <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} />
+      {currentUser && !createNew ? <button onClick={()=>setCreateNew(true)}>Create New</button> : <></> }
+      {createNew ? <Recommendation setCreateNew={setCreateNew}/> : <></>}
       <Switch>
         <Route exact path="/">
           <Home />
@@ -65,7 +81,7 @@ function App() {
           <Listen />
         </Route>
         <Route exact path="/login">
-          <Login currentUser={currentUser} handleLogIn={handleLogIn} createAccount={createAccount} />
+          <Login handleLogIn={handleLogIn} handleCreateAccount={handleCreateAccount} />
         </Route>
       </Switch>
     </div>
