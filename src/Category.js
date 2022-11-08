@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 
-function Listen(){
+function Category(){
   return(
     <div>
-      <h1>Listen</h1>
+      <h1>Read</h1>
     </div>
   )
 };
 
-export default Listen
+export default Category

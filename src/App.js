@@ -1,11 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Route, Switch, useHistory} from "react-router-dom"
 import './App.css';
 import Home from './Home'
 import NavBar from './NavBar';
-import Read from './Read';
-import Watch from './Watch';
-import Listen from './Listen';
+import Category from './Category';
 import Login from './Login';
 import Recommendation from './Recommendation';
 
@@ -72,13 +70,13 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/read">
-          <Read />
+          <Category />
         </Route>
         <Route exact path="/watch">
-          <Watch />
+          <Category />
         </Route>
         <Route exact path="/listen">
-          <Listen />
+          <Category />
         </Route>
         <Route exact path="/login">
           <Login handleLogIn={handleLogIn} handleCreateAccount={handleCreateAccount} />
