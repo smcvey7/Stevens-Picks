@@ -1,9 +1,12 @@
 import React, {useState} from "react";
+import Post from "./Post";
 
-function Category(){
+function Category({posts, title}){
+  console.log(title, "category receives", posts)
+  
   return(
     <div>
-      <h1>Read</h1>
+      <h1>{title}</h1>
     </div>
   )
 };
