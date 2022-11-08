@@ -3,9 +3,9 @@
     {
       "id": 1,
       "title": "Mr. Sunshine",
-      "creator": "",
+      "creator": "user123",
       "img": "https://upload.wikimedia.org/wikipedia/en/a/a5/Mr._Sunshine_%282018_TV_series%29.jpg",
-      "text": "Mr. Sunshine is a historical drama about Joseon's fight not just to maintain its independence for its very existance. ",
+      "text": "Mr. Sunshine is a historical drama about Joseon's fight not just to maintain its independence, but for its very existance. ",
       "type": "watch",
       "likes": 0,
       "comments": [
