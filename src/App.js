@@ -11,9 +11,9 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null)
   const [createNew, setCreateNew] = useState(false)
   const [posts, setPosts] = useState({
-    read: [],
-    watch: [],
-    listen: []
+    read: null,
+    watch: null,
+    listen: null
   })
   const history = useHistory()
 
@@ -96,13 +96,13 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/read">
-          <Category />
+          <Category posts = {posts.read} title="Read" />
         </Route>
         <Route exact path="/watch">
-          <Category />
+          <Category posts = {posts.watch} title="Watch"/>
         </Route>
         <Route exact path="/listen">
-          <Category />
+          <Category posts = {posts.listen} title="Listen"/>
         </Route>
         <Route exact path="/login">
           <Login handleLogIn={handleLogIn} handleCreateAccount={handleCreateAccount} />

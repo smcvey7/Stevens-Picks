@@ -5,9 +5,16 @@
       "title": "Mr. Sunshine",
       "creator": "",
       "img": "https://upload.wikimedia.org/wikipedia/en/a/a5/Mr._Sunshine_%282018_TV_series%29.jpg",
-      "text": "",
+      "text": "Mr. Sunshine is a historical drama about Joseon's fight not just to maintain its independence for its very existance. ",
       "type": "watch",
-      "likes": 0
+      "likes": 0,
+      "comments": [
+        {
+          "id": 1,
+          "user": "smcvey",
+          "comment": "이병훈은 너무 멋있다!"
+        }
+      ]
     }
   ],
   "users": [
