@@ -10,7 +10,33 @@ import Recommendation from './Recommendation';
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
   const [createNew, setCreateNew] = useState(false)
+  const [posts, setPosts] = useState({
+    read: [],
+    watch: [],
+    listen: []
+  })
   const history = useHistory()
+
+  useEffect(()=>{
+    fetch(`http://localhost:3000/posts/`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "Application/json"
+      }
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      const updatedPosts = {
+        read: [],
+        watch: [],
+        listen: []
+      }
+      data.map(post=>{
+        updatedPosts[post.type].push(post)
+      })
+      setPosts(updatedPosts)
+    })
+  }, [])
 
   function handleLogIn(userInfo){
     fetch(`http://localhost:3000/users/`, {
