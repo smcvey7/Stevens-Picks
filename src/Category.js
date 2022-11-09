@@ -9,7 +9,7 @@ function Category({posts, title}){
 
   return(
     <div>
-      <h1>{title}</h1>
+      <h1 className="categoryTitle">{title}</h1>
       {postList}
     </div>
   )
