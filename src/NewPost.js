@@ -7,8 +7,9 @@ function NewPost({setCreateNew, currentUser, createPost}){
     "creator": currentUser,
     "img": "",
     "text": "",
-    "type": "",
-    "likes": 0
+    "type": "read",
+    "likes": 0,
+    "comments": []
   })
 
   function handleChange(e){

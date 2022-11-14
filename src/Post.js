@@ -3,7 +3,7 @@ import Comment from "./Comment";
 
 function Post({postInfo, updateLikes}){
   const [likeCount, setLikeCount]=useState(0)
-  const comments = postInfo.comments.length===0? <emphasize>no comments yet</emphasize> : postInfo.comments.map(comment=>{
+  const comments = postInfo.comments.length===0? <em>no comments yet</em> : postInfo.comments.map(comment=>{
     return <Comment key={comment.id} commentInfo={comment} />
   })
 

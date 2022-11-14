@@ -71,16 +71,16 @@ function App() {
       if (userData.length !== 0) alert(`Username ${newUser.username} already taken. Please select a different username.`)
       else{
         fetch(`http://localhost:3000/users/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "Application/json"
-      },
-      body: JSON.stringify(newUser)
-    })
-    .then(res=>res.json())
-    .then(data=>{
-      console.log("account created", data)
-    })
+          method: "POST",
+          headers: {
+            "Content-Type": "Application/json"
+          },
+          body: JSON.stringify(newUser)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+          console.log("account created", data)
+        })
         }
     })
   }
@@ -112,7 +112,23 @@ function App() {
   }
 
   function createPost(newPost){
-    console.log(newPost)
+    fetch(`http://localhost:3000/posts/`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "Application/json"
+          },
+          body: JSON.stringify(newPost)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+          const type = data.type
+          console.log("postCreated", data);
+          setPosts({
+            ...posts,
+            [type]: [...posts[type], data]
+          })
+        })
+    // setCreateNew(false)
   }
 
   return (
