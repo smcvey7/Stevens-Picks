@@ -52,7 +52,7 @@ function App() {
       else if (userInfo.username !== userData[0].username || userInfo.password !== userData[0].password) {
         alert("Incorrect username/password combo. Please try again or create an account.")}
       else if (userInfo.username === userData[0].username && userInfo.password === userData[0].password){
-        setCurrentUser(userData[0])
+        setCurrentUser(userData[0].username)
         history.push("/")
       }
     })
