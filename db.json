@@ -2,12 +2,64 @@
   "posts": [
     {
       "id": 1,
-      "title": "미스터 션샤인 (Mr. Sunshine)",
+      "title": "미스터 션샤인 (Mr. Sunshine)-Netflix",
+      "link": "https://www.netflix.com/title/80991107",
       "creator": "user123",
       "img": "https://upload.wikimedia.org/wikipedia/en/a/a5/Mr._Sunshine_%282018_TV_series%29.jpg",
       "text": "Mr. Sunshine is a historical drama about Joseon's fight to maintain not only its independence, but its very existance.",
       "type": "watch",
-      "likes": 0,
+      "likes": 6,
+      "comments": [
+        {
+          "id": 1,
+          "user": "smcvey",
+          "text": "이병훈은 너무 멋있다!"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "The Way of Kings",
+      "link": "https://books.apple.com/us/book/the-way-of-kings/id376229549",
+      "creator": "smcvey",
+      "img": "https://upload.wikimedia.org/wikipedia/en/8/8b/TheWayOfKings.png",
+      "text": "This book may look intimidating, and there is a lot to learn about the world that Sanderson has created, but it eases the reader into it all in a natural way. The character are compelling and diverse and are driven by clear values, which in true romantic style, are frequently challenged by thought-provoking dilemmas. The world is unique and stunningly portrayed. A must read!",
+      "type": "read",
+      "likes": 35,
+      "comments": [
+        {
+          "id": 1,
+          "user": "user123",
+          "text": "If I were a spren, I think I would be a confusion spren."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "The Highwayman",
+      "link": "https://www.youtube.com/watch?v=YGFo0xn4JeY",
+      "creator": "user123",
+      "img": "https://upload.wikimedia.org/wikipedia/en/8/8a/Album_Cover-The_Book_of_Secrets.jpg",
+      "text": "I first heard this song in a high school English class, and even though it is not my usual style it really stuck with me. Loreena McKennitt sings this hauntingly beautiful rendition of Alfred Noyes' 1906 narrative poem on her album The Book of Secrets. Taking place in 18th century rural England, it tells the tragic love story of an unnamed highwayman and Bess the daughter of the landlord of an inn. I am amazed at the skill of both the author and the singer at allowing the reader to understand the characters, experience their romance, and to despair at the outcome in just over ten minutes. I can't help coming back to it every so often and having a good cry.",
+      "type": "listen",
+      "likes": 5,
+      "comments": [
+        {
+          "id": 1,
+          "user": "smcvey",
+          "text": "Down with King George!"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "",
+      "link": "link",
+      "creator": "user123",
+      "img": "https://upload.wikimedia.org/wikipedia/en/a/a5/Mr._Sunshine_%282018_TV_series%29.jpg",
+      "text": "Mr. Sunshine is a historical drama about Joseon's fight to maintain not only its independence, but its very existance.",
+      "type": "watch",
+      "likes": 6,
       "comments": [
         {
           "id": 1,

@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import Post from "./Post";
 
-function Category({posts, title}){
+function Category({posts, title, updateLikes}){
   const postList = posts? posts.map(post=>{
-    return <Post key={post.id} postInfo={post} />
+    return <Post key={post.id} postInfo={post} updateLikes={updateLikes} />
   }):
   <p>no posts available</p>
 

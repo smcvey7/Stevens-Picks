@@ -5,7 +5,7 @@ import Home from './Home'
 import NavBar from './NavBar';
 import Category from './Category';
 import Login from './Login';
-import Recommendation from './Recommendation';
+import NewPost from './NewPost';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
@@ -79,10 +79,40 @@ function App() {
     })
     .then(res=>res.json())
     .then(data=>{
-      console.log("posted", data)
+      console.log("account created", data)
     })
         }
     })
+  }
+
+  function updateLikes(postId, newLikeCount, type){
+    const likeUpdate = {likes: newLikeCount}
+    fetch(`http://localhost:3000/posts/${postId}`, {
+      method: "PATCH",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(likeUpdate)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      const postUpdate = posts[type].map(post=>{
+        if (post.id === postId){
+          return {
+            ...post,
+            likes: data.likes
+          }
+        }else return post
+      })
+      setPosts({
+        ...posts,
+        [type]: postUpdate
+      })
+    })
+  }
+
+  function createPost(newPost){
+    console.log(newPost)
   }
 
   return (
@@ -90,19 +120,19 @@ function App() {
       <h1>Steven's Picks</h1>
       <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} />
       {currentUser && !createNew ? <button onClick={()=>setCreateNew(true)}>Create New</button> : <></> }
-      {createNew ? <Recommendation setCreateNew={setCreateNew}/> : <></>}
+      {createNew ? <NewPost setCreateNew={setCreateNew} currentUser={currentUser} createPost={createPost}/> : <></>}
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
         <Route exact path="/read">
-          <Category posts = {posts.read} title="Read" />
+          <Category posts = {posts.read} title="Read" updateLikes={updateLikes} />
         </Route>
         <Route exact path="/watch">
-          <Category posts = {posts.watch} title="Watch"/>
+          <Category posts = {posts.watch} title="Watch" updateLikes={updateLikes}/>
         </Route>
         <Route exact path="/listen">
-          <Category posts = {posts.listen} title="Listen"/>
+          <Category posts = {posts.listen} title="Listen" updateLikes={updateLikes}/>
         </Route>
         <Route exact path="/login">
           <Login handleLogIn={handleLogIn} handleCreateAccount={handleCreateAccount} />

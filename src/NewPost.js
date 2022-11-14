@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 
-function Recommendation({setCreateNew}){
+function NewPost({setCreateNew, currentUser, createPost}){
   const [newEntry, setNewEntry]=useState({
     "title": "",
-    "creator": "",
+    "link": "",
+    "creator": currentUser,
     "img": "",
     "text": "",
     "type": "",
@@ -18,11 +19,17 @@ function Recommendation({setCreateNew}){
     setNewEntry(updatedInfo)
   }
 
+  function handleSubmit(e){
+    e.preventDefault();
+    createPost(newEntry)
+  }
+
   return(
     <div className=" accountForm">
       <h2>Create Recommendation</h2>
-      <form id="recommendationForm">
+      <form id="recommendationForm" onSubmit={handleSubmit}>
         Title:<br/><input name="title" value={newEntry.title} onChange={handleChange} /><br/>
+        Link:<br/><input name="link" value={newEntry.link} onChange={handleChange} /><br/>
         Creator:<br/><input name="creator" value={newEntry.creator} onChange={handleChange} /><br/>
         Image URL:<br/><input name="img" value={newEntry.img} onChange={handleChange} /><br/>
         Description:<br/><textarea name="text" value={newEntry.text} onChange={handleChange} /><br/>
@@ -37,4 +44,4 @@ function Recommendation({setCreateNew}){
   )
 };
 
-export default Recommendation
+export default NewPost

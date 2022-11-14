@@ -36,6 +36,16 @@ a.clickLink{
   text-decoration: underline;
 }
 
+a.postTitle{
+  color: black;
+  text-decoration: none;
+}
+
+a.postTitle:hover{
+  color: black;
+  text-decoration: underline;
+}
+
 .flexContainer{
   display: flex;
 }
