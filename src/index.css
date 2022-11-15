@@ -31,6 +31,7 @@ h1{
   color: #f1f0ec;
 }
 
+
 div#navBar {
   font-size: 30px;
   justify-content: space-around;
@@ -51,7 +52,7 @@ a.postTitle{
 }
 
 a.postTitle:hover{
-  color: black;
+  color: #f1f0ec;
   text-decoration: underline;
 }
 
@@ -110,7 +111,7 @@ div.individualComment{
   flex-basis: 80%;
   text-align: justify;
   justify-content: space-between;
-  margin: 10% 50px 0px 50px;
+  margin: 5% 50px 0px 50px;
 }
 
 .postExtras{

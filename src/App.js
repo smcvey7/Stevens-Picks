@@ -142,13 +142,13 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/read">
-          <Category posts = {posts.read} title="Read" updateLikes={updateLikes} />
+          <Category posts = {posts.read} heading="READ" title="Read" updateLikes={updateLikes} />
         </Route>
         <Route exact path="/watch">
-          <Category posts = {posts.watch} title="Watch" updateLikes={updateLikes}/>
+          <Category posts = {posts.watch} heading="WATCH" title="Watch" updateLikes={updateLikes}/>
         </Route>
         <Route exact path="/listen">
-          <Category posts = {posts.listen} title="Listen" updateLikes={updateLikes}/>
+          <Category posts = {posts.listen} heading="LISTEN" title="Listen" updateLikes={updateLikes}/>
         </Route>
         <Route exact path="/login">
           <Login handleLogIn={handleLogIn} handleCreateAccount={handleCreateAccount} />

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Post from "./Post";
 
-function Category({posts, title, updateLikes}){
+function Category({posts, title, updateLikes, heading}){
   const postList = posts? posts.map(post=>{
     return <Post key={post.id} postInfo={post} updateLikes={updateLikes} />
   }):
@@ -9,7 +9,7 @@ function Category({posts, title, updateLikes}){
 
   return(
     <div>
-      <h1 className="categoryTitle">{title}</h1>
+      <h1 className="categoryTitle">{heading}</h1>
       {postList}
     </div>
   )
