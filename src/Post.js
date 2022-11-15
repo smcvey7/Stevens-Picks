@@ -19,13 +19,24 @@ function Post({postInfo, updateLikes}){
     updateLikes(postInfo.id, newLikeCount, postInfo.type)
   }
   return(
-    <div className="moduleElement">
-      <a className="postTitle" href={postInfo.link}><h3>{postInfo.title}</h3></a>
-      <img src={postInfo.img}></img>
-      <p>{postInfo.text}</p>
-      <small>Posted by: {postInfo.creator}</small>
-      <button onClick={handleNewLike}>{likeCount} ❤️</button>
-      <div className="commentList">
+    <div className="moduleElement flexContainer">
+      <div className="flexContainer nonComment">
+        <div className="flexContainer postHeading">
+          <a className="postTitle" href={postInfo.link}><h3>{postInfo.title}</h3></a>
+          <img src={postInfo.img}></img>
+        </div>
+        <div className=" flexContainer postMain">
+          <p>{postInfo.text}</p>
+          <div className="postExtras flexContainer">
+            <small>Posted by: {postInfo.creator}</small>
+            <div className="likeContainer">
+              <strong className="likeButton" onClick={handleNewLike}>❤️ </strong>
+              {likeCount}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flexContainer commentList">
         {comments}
       </div>
     </div>
