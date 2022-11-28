@@ -1,16 +1,24 @@
 import React, {useState, useEffect} from "react";
 import Comment from "./Comment";
+import NewComment from "./NewComment";
 
-function Post({postInfo, updateLikes}){
+function Post({postInfo, updateLikes, currentUser, createComment}){
   const [likeCount, setLikeCount]=useState(0)
-  const comments = postInfo.comments.length===0? <em>no comments yet</em> : postInfo.comments.map(comment=>{
-    return <Comment key={comment.id} commentInfo={comment} />
-  })
+  const [comments, setComments]=useState(null)
 
   useEffect(()=>{
+    if (postInfo.comments.length===0){
+      setComments(<div className="individualComment flexContainer"><em>Be the first to comment!</em></div>)
+    }else {
+      const commentList = postInfo.comments.map(comment=>{
+        return <Comment key={comment.text} commentInfo={comment} />
+      })
+      setComments(commentList)
+    }
+
     const savedLikes= postInfo.likes
     setLikeCount(savedLikes)
-  },[])
+  }, [postInfo])
 
   function handleNewLike(){
     const newLikeCount = likeCount + 1
@@ -37,6 +45,7 @@ function Post({postInfo, updateLikes}){
         </div>
       </div>
       <div className="flexContainer commentList">
+        <NewComment currentUser={currentUser} id={postInfo.id} createComment={createComment} existingComments = {postInfo.comments} type={postInfo.type} />
         {comments}
       </div>
     </div>

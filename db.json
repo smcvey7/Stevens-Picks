@@ -6,7 +6,7 @@
       "link": "https://www.netflix.com/title/80991107",
       "creator": "user123",
       "img": "https://upload.wikimedia.org/wikipedia/en/a/a5/Mr._Sunshine_%282018_TV_series%29.jpg",
-      "text": "Mr. Sunshine is a historical drama about Joseon's fight to maintain not only its independence, but its very existance.",
+      "text": "Mr. Sunshine is a historical drama which takes place in Joseon as the kingdom struggles to maintain not only its independence, but its very existance. The story revolves around five main characters, each with their own tragic back-story, trying to live and act according to their own unique values and ideals, even as their country is falling apart around them. This is a beautiful romantic work that I have to re-watch at least once a year.",
       "type": "watch",
       "likes": 6,
       "comments": [
@@ -14,6 +14,10 @@
           "id": 1,
           "user": "smcvey",
           "text": "이병훈은 너무 멋있다!"
+        },
+        {
+          "user": "anonymous",
+          "text": "I haven't seen this yet!"
         }
       ]
     },
@@ -25,7 +29,7 @@
       "img": "https://upload.wikimedia.org/wikipedia/en/8/8b/TheWayOfKings.png",
       "text": "This book may look intimidating, and there is a lot to learn about the world that Sanderson has created, but it eases the reader into it all in a natural way. The character are compelling and diverse and are driven by clear values, which in true romantic style, are frequently challenged by thought-provoking dilemmas. The world is unique and stunningly portrayed. A must read!",
       "type": "read",
-      "likes": 42,
+      "likes": 44,
       "comments": [
         {
           "id": 1,
@@ -51,6 +55,35 @@
     },
     {
       "id": 3,
+      "title": "Symmetry/Symmetry",
+      "link": "https://open.spotify.com/artist/4RgA2Jt4fckn8HDXU2ykfx",
+      "creator": "smcvey",
+      "img": "https://f4.bcbits.com/img/0004177804_10.jpg",
+      "text": "As a disclaimer, I grew up with one of the members of this band, and you can hear me on violin in a few of their songs, but I don't think it has biased me significantly, because Symmetry rocks!. They produce alternative rock music with interesting complex melodies and thought-provoking lyrics, but can be enjoyed both attentively and in the background while working or exercising. From the opening bars of songs like The Great Saboteur you know you're in for something special. You should definitely check them out!",
+      "type": "listen",
+      "likes": 1001,
+      "comments": [
+        {
+          "id": 1,
+          "user": "user123",
+          "text": "Symmetry is awesome! I play their Christmas album non-stop during the holidays!"
+        },
+        {
+          "user": "anonymous",
+          "text": "When will their next album come out? I can't wait!"
+        },
+        {
+          "user": "anonymous",
+          "text": "Right?"
+        },
+        {
+          "user": "anonymous",
+          "text": "Do they do live shows?"
+        }
+      ]
+    },
+    {
+      "id": 4,
       "title": "The Highwayman",
       "link": "https://www.youtube.com/watch?v=YGFo0xn4JeY",
       "creator": "user123",
@@ -63,36 +96,20 @@
           "id": 1,
           "user": "smcvey",
           "text": "Down with King George!"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "title": "",
-      "link": "link",
-      "creator": "user123",
-      "img": "https://upload.wikimedia.org/wikipedia/en/a/a5/Mr._Sunshine_%282018_TV_series%29.jpg",
-      "text": "Mr. Sunshine is a historical drama about Joseon's fight to maintain not only its independence, but its very existance.",
-      "type": "watch",
-      "likes": 6,
-      "comments": [
+        },
         {
-          "id": 1,
-          "user": "smcvey",
-          "text": "이병훈은 너무 멋있다!"
+          "user": "anonymous",
+          "text": "Hey all!"
+        },
+        {
+          "user": "pmcvey",
+          "text": "This is my jam!"
+        },
+        {
+          "user": "anonymous",
+          "text": "Where is Loreena now?"
         }
       ]
-    },
-    {
-      "title": "Mistborn",
-      "link": "https://books.apple.com/us/book/mistborn/id386002824",
-      "creator": "pmcvey",
-      "img": "https://is2-ssl.mzstatic.com/image/thumb/Publication113/v4/f5/4e/7a/f54e7ae5-5895-cfb7-9deb-d90647d6aade/9781429914567.jpg/626x0w.webp",
-      "text": "Koloss!",
-      "type": "read",
-      "likes": 0,
-      "comments": [],
-      "id": 5
     }
   ],
   "users": [

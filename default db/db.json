@@ -6,7 +6,7 @@
       "link": "https://www.netflix.com/title/80991107",
       "creator": "user123",
       "img": "https://upload.wikimedia.org/wikipedia/en/a/a5/Mr._Sunshine_%282018_TV_series%29.jpg",
-      "text": "Mr. Sunshine is a historical drama about Joseon's fight to maintain not only its independence, but its very existance.",
+      "text": "Mr. Sunshine is a historical drama which takes place in Joseon as the kingdom struggles to maintain not only its independence, but its very existance. The story revolves around five main characters, each with their own tragic back-story, trying to live and act according to their own unique values and ideals, even as their country is falling apart around them. This is a beautiful romantic work that I have to re-watch at least once a year.",
       "type": "watch",
       "likes": 6,
       "comments": [
@@ -25,12 +25,27 @@
       "img": "https://upload.wikimedia.org/wikipedia/en/8/8b/TheWayOfKings.png",
       "text": "This book may look intimidating, and there is a lot to learn about the world that Sanderson has created, but it eases the reader into it all in a natural way. The character are compelling and diverse and are driven by clear values, which in true romantic style, are frequently challenged by thought-provoking dilemmas. The world is unique and stunningly portrayed. A must read!",
       "type": "read",
-      "likes": 35,
+      "likes": 42,
       "comments": [
         {
           "id": 1,
           "user": "user123",
           "text": "If I were a spren, I think I would be a confusion spren."
+        },
+        {
+          "id": 2,
+          "user": "pmcvey",
+          "text": "Are there kitten spren?"
+        },
+        {
+          "id": 3,
+          "user": "amcherman",
+          "text": "You wish pmcvey!"
+        },
+        {
+          "id": 4,
+          "user": "pmcherman",
+          "text": "I definitely saw a stink spren when I was changing Milo yesterday"
         }
       ]
     },

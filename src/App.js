@@ -128,27 +128,53 @@ function App() {
             [type]: [...posts[type], data]
           })
         })
-    // setCreateNew(false)
+    setCreateNew(false)
+  }
+
+  function createComment(newCommentList, id, type){
+    console.log("attempting" )
+    fetch(`http://localhost:3000/posts/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "Application/json"
+      },
+      body: JSON.stringify({comments: newCommentList})
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      const update = posts[type].map((post)=>{
+        if (post.id === id){
+          return({
+            ...post,
+            comments: data.comments
+          })
+        }else return post
+      });
+      setPosts({
+        ...posts,
+        [type]: update
+      })
+    })
   }
 
   return (
     <div className="App">
       <h1>Steven's Picks</h1>
       <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} />
-      {currentUser && !createNew ? <button onClick={()=>setCreateNew(true)}>Create New</button> : <></> }
+      {currentUser && !createNew ? <button id='createNewButton' onClick={()=>setCreateNew(true)}><a className='createNew navLinks'>Create New</a></button> : <></> }
       {createNew ? <NewPost setCreateNew={setCreateNew} currentUser={currentUser} createPost={createPost}/> : <></>}
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
         <Route exact path="/read">
-          <Category posts = {posts.read} heading="READ" title="Read" updateLikes={updateLikes} />
+          <Category posts = {posts.read} heading="READ" updateLikes={updateLikes} currentUser={currentUser} createComment={createComment} />
         </Route>
         <Route exact path="/watch">
-          <Category posts = {posts.watch} heading="WATCH" title="Watch" updateLikes={updateLikes}/>
+          <Category posts = {posts.watch} heading="WATCH" updateLikes={updateLikes} currentUser={currentUser} createComment={createComment} />
         </Route>
         <Route exact path="/listen">
-          <Category posts = {posts.listen} heading="LISTEN" title="Listen" updateLikes={updateLikes}/>
+          <Category posts = {posts.listen} heading="LISTEN" updateLikes={updateLikes} currentUser={currentUser} createComment={createComment} />
         </Route>
         <Route exact path="/login">
           <Login handleLogIn={handleLogIn} handleCreateAccount={handleCreateAccount} />

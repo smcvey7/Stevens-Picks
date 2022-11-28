@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState} from "react"
 
 function NewPost({setCreateNew, currentUser, createPost}){
   const [newEntry, setNewEntry]=useState({
@@ -26,16 +26,16 @@ function NewPost({setCreateNew, currentUser, createPost}){
   }
 
   return(
-    <div className=" accountForm">
+    <div className="newPostForm flexContainer">
       <h2>Create Recommendation</h2>
       <form id="recommendationForm" onSubmit={handleSubmit}>
-        Title:<input name="title" value={newEntry.title} onChange={handleChange} /><br/>
-        Link:<input name="link" value={newEntry.link} onChange={handleChange} /><br/>
+        <div className="flexContainer"><h4>Creator: <strong>{newEntry.creator}</strong></h4><br/></div>
+        <div className="flexContainer"><h4 className="grow">Title:</h4><input className="growInput" name="title" value={newEntry.title} onChange={handleChange} /><br/></div>
+        <div className="flexContainer"><h4 className="grow">Link:</h4><input className="growInput" name="link" value={newEntry.link} onChange={handleChange} /><br/></div>
         
-        Image URL:<input name="img" value={newEntry.img} onChange={handleChange} /><br/>
-        Description:<textarea name="text" value={newEntry.text} onChange={handleChange} /><br/>
-        Creator:<strong>{newEntry.creator}</strong><br/>
-        Type:<select value={newEntry.type} onChange={handleChange}>
+        <div className="flexContainer"><h4 className="grow">Image URL:</h4><input className="growInput" name="img" value={newEntry.img} onChange={handleChange} /><br/></div>
+        <div className="flexContainer"><h4 className="grow">Description:</h4> <textarea className="growInput" name="text" value={newEntry.text} onChange={handleChange} /><br/></div>
+        Type: <select name="type" value={newEntry.type} onChange={handleChange}>
           <option>Read</option>
           <option>Watch</option>
           <option>Listen</option>
