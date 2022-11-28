@@ -36,9 +36,9 @@ function NewPost({setCreateNew, currentUser, createPost}){
         <div className="flexContainer"><h4 className="grow">Image URL:</h4><input className="growInput" name="img" value={newEntry.img} onChange={handleChange} /><br/></div>
         <div className="flexContainer"><h4 className="grow">Description:</h4> <textarea className="growInput" name="text" value={newEntry.text} onChange={handleChange} /><br/></div>
         Type: <select name="type" value={newEntry.type} onChange={handleChange}>
-          <option>Read</option>
-          <option>Watch</option>
-          <option>Listen</option>
+          <option>read</option>
+          <option>watch</option>
+          <option>listen</option>
         </select><br/>
         <input className="sendButton" type="submit" /><button onClick={()=>setCreateNew(false)}>Cancel</button>
       </form>

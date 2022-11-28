@@ -18,6 +18,10 @@
         {
           "user": "anonymous",
           "text": "I haven't seen this yet!"
+        },
+        {
+          "user": "flatironstudent",
+          "text": "I love this show!"
         }
       ]
     },
@@ -50,6 +54,10 @@
           "id": 4,
           "user": "pmcherman",
           "text": "I definitely saw a stink spren when I was changing Milo yesterday"
+        },
+        {
+          "user": "flatironstudent",
+          "text": "I love these!"
         }
       ]
     },
@@ -61,7 +69,7 @@
       "img": "https://f4.bcbits.com/img/0004177804_10.jpg",
       "text": "As a disclaimer, I grew up with one of the members of this band, and you can hear me on violin in a few of their songs, but I don't think it has biased me significantly, because Symmetry rocks!. They produce alternative rock music with interesting complex melodies and thought-provoking lyrics, but can be enjoyed both attentively and in the background while working or exercising. From the opening bars of songs like The Great Saboteur you know you're in for something special. You should definitely check them out!",
       "type": "listen",
-      "likes": 1001,
+      "likes": 1004,
       "comments": [
         {
           "id": 1,
@@ -79,6 +87,14 @@
         {
           "user": "anonymous",
           "text": "Do they do live shows?"
+        },
+        {
+          "user": "anonymous",
+          "text": "They rock!"
+        },
+        {
+          "user": "anonymous",
+          "text": "They're great!"
         }
       ]
     },
@@ -110,6 +126,17 @@
           "text": "Where is Loreena now?"
         }
       ]
+    },
+    {
+      "title": "甄嬛传 (Empresses in the Palace)",
+      "link": "https://www.youtube.com/watch?v=QOaXm_9S9_0",
+      "creator": "flatironstudent",
+      "img": "https://i.ytimg.com/vi/QOaXm_9S9_0/maxresdefault.jpg",
+      "text": "Definitely a soap opera, but with enough historical references and differences from English soap operas to mitigate some of the guilt that may otherwise come with such a guilty pleasure. This series tells the story of the wives and concubines of the Chinese emperor. Their internal politics and scheming for favor within the very limited confines in which they lived are fascinating, and it demonstrates how no one can be a winner under an authoritarian regime.",
+      "type": "watch",
+      "likes": 2,
+      "comments": [],
+      "id": 5
     }
   ],
   "users": [
@@ -127,6 +154,11 @@
       "username": "pmcvey",
       "password": "kittens",
       "id": 3
+    },
+    {
+      "username": "flatironstudent",
+      "password": "password",
+      "id": 4
     }
   ]
 }
